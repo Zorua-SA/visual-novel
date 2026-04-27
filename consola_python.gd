@@ -67,6 +67,10 @@ func ejecutar_codigo(codigo: String):
 func _verificar_solucion(codigo: String):
 	var limpio = codigo.replace(" ", "").to_lower()
 	var esperado_limpio = codigo_esperado.replace(" ", "").to_lower()
+	
+	# Normalizar comillas simples y dobles para que ambas sean válidas
+	limpio = limpio.replace('"', "'")
+	esperado_limpio = esperado_limpio.replace('"', "'")
 
 	if limpio == esperado_limpio:
 		_imprimir("\n  🎉 ¡Correcto! Presiona Cerrar para continuar.", "green")
@@ -85,4 +89,4 @@ func _on_btn_ejecutar():
 
 func _on_btn_cerrar():
 	visible = false
-	emit_signal("ejercicio_completado")
+	emit_signal("ejercicio_completado", true)  # ← siempre true porque solo aparece si fue correcto
