@@ -15,6 +15,8 @@ var dialogo = []
 var indice = 0
 var velocidad = 0.03
 
+@onready var sonido_texto = get_node("/root/Cap_1/SonidoTexto")
+@onready var sonido_escribir = get_node("/root/Cap_1/SonidoEscribir")
 @onready var consola = get_node("/root/Cap_1/ConsolaPython")
 @onready var opciones_menu = get_node("/root/Cap_1/OpcionesMenu")
 
@@ -23,10 +25,14 @@ func _ready():
 	consola.visible = false
 	opciones_menu.visible = false
 	opciones_menu.connect("opcion_elegida", _on_opcion_elegida)
-	consola.connect("ejercicio_completado", _on_consola_completada)
+	consola.ejercicio_completado.connect(_on_consola_completada)
 	$"../Nombre/LineEditNombre".visible = false
+	$"../Nombre/LineEditNombre".connect("text_changed", _on_texto_cambiado) 
 	_mostrar_dialogo()
 
+
+func _on_texto_cambiado(texto_nuevo: String):
+	sonido_escribir.play()
 
 func _mostrar_dialogo():
 	var nombre_label = $"../Nombre/Cnombre"
@@ -121,6 +127,7 @@ func _mostrar_entrada_nombre():
 	line.grab_focus()
 
 
+
 func _mostrar_menu_repaso():
 	# Reutiliza opciones_menu pero con opciones de repaso
 	opciones_menu.iniciar_repaso()
@@ -164,6 +171,8 @@ func _aplicar_expresion(sprite_node, exp):
 func _mostrar_letra_por_letra(label):
 	for i in range(label.get_total_character_count()):
 		label.visible_characters = i
+		if i % 3 == 0:  # cada 3 letras para que no sature
+			sonido_texto.play()
 		await get_tree().create_timer(velocidad).timeout
 
 

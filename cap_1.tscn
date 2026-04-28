@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7vf6gwgytli0"]
+[gd_scene load_steps=14 format=3 uid="uid://b7vf6gwgytli0"]
 
 [ext_resource type="Texture2D" uid="uid://dfc5mkiplhon7" path="res://Fondo/Fondo1.png" id="1_nqrd8"]
 [ext_resource type="Texture2D" uid="uid://bjukidojiu3rp" path="res://Personajes/Codel sprite/Codel3.png" id="2_rc4xl"]
@@ -8,6 +8,10 @@
 [ext_resource type="Script" uid="uid://cuf5207y1js6t" path="res://instructora.gd" id="6_mtuym"]
 [ext_resource type="Script" uid="uid://b5hmib7a1fhnb" path="res://consola_python.gd" id="7_iac48"]
 [ext_resource type="Script" uid="uid://dr70qc8fmist" path="res://opciones_menu.gd" id="8_jiohd"]
+[ext_resource type="AudioStream" uid="uid://dmalaiwqryvr5" path="res://Musica/Fondo/Moonlit Save File.mp3" id="9_j6615"]
+[ext_resource type="Script" uid="uid://dotyvkesdrl6r" path="res://audio_stream_player_2d.gd" id="10_j6615"]
+[ext_resource type="AudioStream" uid="uid://bl8cdtdf20qu5" path="res://Musica/Escribir/820353__bryansaraiva__typewriter-key-press-06.wav" id="11_j6615"]
+[ext_resource type="AudioStream" uid="uid://d4jnit80b175x" path="res://Musica/Texto/380145__yottasounds__computer-keyboard-single-key-type-5-shift.wav" id="12_ukkxn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jiohd"]
 bg_color = Color(0.11764706, 0.11764706, 0.18039216, 1)
@@ -205,3 +209,15 @@ layout_mode = 2
 
 [node name="BtnExplicar" type="Button" parent="OpcionesMenu/Panel/VBoxContainer"]
 layout_mode = 2
+
+[node name="MusicaFondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_j6615")
+volume_db = -25.078
+autoplay = true
+script = ExtResource("10_j6615")
+
+[node name="SonidoEscribir" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_j6615")
+
+[node name="SonidoTexto" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_ukkxn")
