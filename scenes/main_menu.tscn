@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://b6yjm1kojgb2h"]
+
+[ext_resource type="Script" uid="uid://bw610x8x0mvbd" path="res://scenes/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dvf81h0uk4rav" path="res://Fondo/imagen_menu_principal.png" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://cl32con8cko7u" path="res://Fondo/titulo_juego-removebg-preview.png" id="2_ekxnf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
+texture = ExtResource("1_l6cm7")
+modulate_color = Color(0.89492244, 0.89492244, 0.8949224, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vue75"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+bg_color = Color(0.38170326, 0.38170323, 0.38170323, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
+bg_color = Color(0.38039216, 0.38039216, 0.38039216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
+bg_color = Color(0.38039216, 0.38039216, 0.38039216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(0.38039216, 0.38039216, 0.38039216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqqt6"]
+texture = ExtResource("2_ekxnf")
+
+[node name="MainMenu" type="Control" unique_id=1927341458]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="Panel" type="Panel" parent="." unique_id=1227663779]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ekxnf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=970267084]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -242.0
+offset_right = 135.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=2053994868]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
+text = "Nueva partida"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1852698816]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
+text = "Cargar partida"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1192755242]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wu84c")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
+text = "Opciones"
+
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1034794433]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
+text = "Glosario
+"
+
+[node name="Button5" type="Button" parent="VBoxContainer" unique_id=411241769]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vue75")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
+text = "Salir
+"
+
+[node name="Panel2" type="Panel" parent="." unique_id=59138841]
+layout_mode = 1
+offset_top = 1.0
+offset_right = 350.0
+offset_bottom = 191.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_bqqt6")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_cargar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_glosario_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button5" to="." method="_on_salir_pressed"]
